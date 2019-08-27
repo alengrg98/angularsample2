@@ -1,0 +1,9 @@
+<table>
+    <tr *ngFor="let i of data1">
+
+        <td>{{i.productId}}</td>
+        <td>{{i.productName}}</td>
+        <td>{{i.productPrice}}</td>
+        <input type="button" value="edit" (click)="editpro()" >
+    </tr>
+</table>
