@@ -19,7 +19,7 @@ price;
 
   addprod(){
     this.es.postdata(this.pid,this.pname,this.price).subscribe();
-    this.rt.navigateByUrl("");
+    this.rt.navigateByUrl("/home/view");
   }
 
 

@@ -21,7 +21,8 @@ export class ViewproductComponent implements OnInit {
   }
 
   editpro(){
-    this.vr.navigateByUrl("");
+   /*  this.vr.navigateByUrl(""); */
+   
   }
 
 

@@ -8,15 +8,18 @@ import { EditproductComponent } from './editproduct/editproduct.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DataComponent } from './data/data.component';
-const routes: Routes = [
+import {HomeComponent} from './home/home.component';
+import {LoginComponent} from './login/login.component';
+
+const routes: Routes = [{path:"",component:LoginComponent},{path:"home",component:HomeComponent,children:
+[
   {path:"new",component:AddproductComponent},
-  {path:"edit",component:EditproductComponent},
-  {path:"",component:ViewproductComponent},
+  {path:"edit/:id",component:EditproductComponent},
+  {path:"view",component:ViewproductComponent},
   {path:"delete",component:RemoveproductComponent},
-  {path:"about",component:AboutusComponent},
+  {path:"about/:cname/:loc",component:AboutusComponent},
   {path:"contact",component:ContactusComponent},
-  {path:"data",component:DataComponent}
-];
+  {path:"data",component:DataComponent}]}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

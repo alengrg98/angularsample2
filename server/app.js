@@ -62,6 +62,26 @@ app.post("/postdata",function(req,res){
     })
 })
 
+app.get("/getdata/:id",function(req,res){
+    prod.find({productId:req.params.id},function(err,result){
+        if (err) throw err;
+        else{
+            res.send(result);
+        }
+    })
+})
+
+app.post("/editdata",function(req,res){
+    prod.updateOne({productId:req.body.productId},{$set:{productName:req.body.productName,productPrice:req.body.productPrice}},function(err,result){
+        if (err) throw err;
+        else
+        {
+            console.log("Data Updated");
+            
+        }
+    })
+})
+
 
 
 app.listen(8090,function(req,res){

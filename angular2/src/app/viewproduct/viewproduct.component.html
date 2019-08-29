@@ -4,6 +4,6 @@
         <td>{{i.productId}}</td>
         <td>{{i.productName}}</td>
         <td>{{i.productPrice}}</td>
-        <input type="button" value="edit" (click)="editpro()" >
+        <a [routerLink]="['/home/edit',i.productId]"><input type="button" value="edit"> </a>
     </tr>
 </table>
